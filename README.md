@@ -7,20 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-### Instalación
+## Installation
 
 Download package and write some commands to be sure that everything will works fine
 
-- Create a database on mysql
-- Copy .env.example as .env and change the DB_DATABASE value for the database name created before
-- Run these commands to run the project propertly     
+Create a database on mysql
+Copy .env.example as .env and change the DB_DATABASE value for the database name created before
+Run these commands to run the project propertly     
 ```sh
 $ composer update
 $ php artisan migrate --seed
 $ php artisan storage:link
 $ php artisan key:generate
 ```
-- If using linux maybe you need to unlock these files:
+If using linux maybe you need to unlock these files:
 ```sh 
 .../storage/framework/sessions 
 .../storage/framework/views
