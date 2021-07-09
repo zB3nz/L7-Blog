@@ -11,18 +11,18 @@
 
 Download package and follow some additional steps to be sure that everything will works fine.
 
-Create a database on mysql.
+Create a new database on mysql for the project.
 
-Copy .env.example as .env and change the DB_DATABASE value for the database name created before.
+Copy `.env.example` as `.env` and change the `DB_DATABASE` value for the database name created before.
 
-Run these commands to run the project propertly 
+Run these commands to run the project propertly:
 ```sh
 $ composer update
 $ php artisan migrate --seed
 $ php artisan storage:link
 $ php artisan key:generate
 ```
-If using linux maybe you need to unlock these files:
+If using linux maybe you want to to unlock these files:
 ```sh 
 .../storage/framework/sessions 
 .../storage/framework/views
