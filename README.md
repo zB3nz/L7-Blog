@@ -9,11 +9,13 @@
 
 ## Installation
 
-Download package and write some commands to be sure that everything will works fine
+Download package and follow some additional steps to be sure that everything will works fine.
 
-Create a database on mysql
-Copy .env.example as .env and change the DB_DATABASE value for the database name created before
-Run these commands to run the project propertly     
+Create a database on mysql.
+
+Copy .env.example as .env and change the DB_DATABASE value for the database name created before.
+
+Run these commands to run the project propertly 
 ```sh
 $ composer update
 $ php artisan migrate --seed
