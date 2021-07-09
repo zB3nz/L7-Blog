@@ -7,18 +7,17 @@
             @foreach($posts as $post)
             <div class="card mb-4">
 
+                @if ( $post->image )
+                    <a href="{{ route('post', $post) }}">
+                        <img src="{{ $post->get_image }}" class="card-img-top">
+                    </a>
+                @elseif ( $post->iframe )
+                    <div class="embed-responsive embed-responsive-16by9">
+                        {!! $post->iframe !!}
+                    </div>
+                @endif
+
                 <div class="card-body">
-                    @if ( $post->image )
-                        <a href="{{ route('post', $post) }}">
-                            <img src="{{ $post->get_image }}" class="card-img-top">
-                        </a>
-                    @elseif ( $post->iframe )
-                        <div class="embed-responsive embed-responsive-16by9">
-                            {!! $post->iframe !!}
-                        </div>
-                    @endif
-                    
-                    <p></p>
                     <h4 class="card-title text-dark font-weight-bold mb-0">{{ $post->title }}</h4>   
                     <p class="text-muted mb-0">
                         <em> {{ $post->user->name }} </em>
